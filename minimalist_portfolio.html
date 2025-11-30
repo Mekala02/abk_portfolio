@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo" onclick="showPage('professional')">YOUR NAME</a>
+        <ul class="nav-links">
+            <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+            <li><a href="#experiences" onclick="scrollToSection('experiences')">Experiences</a></li>
+            <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
+            <li><a href="#skills" onclick="scrollToSection('skills')">Skills</a></li>
+            <li><a href="#" onclick="showPage('blog')">Blog</a></li>
+            <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+        </ul>
+        <button class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" onclick="toggleMobileMenu()">×</button>
+        <a href="#about" onclick="scrollToSection('about'); toggleMobileMenu()">About</a>
+        <a href="#experiences" onclick="scrollToSection('experiences'); toggleMobileMenu()">Experiences</a>
+        <a href="#projects" onclick="scrollToSection('projects'); toggleMobileMenu()">Projects</a>
+        <a href="#skills" onclick="scrollToSection('skills'); toggleMobileMenu()">Skills</a>
+        <a href="#" onclick="showPage('blog'); toggleMobileMenu()">Blog</a>
+        <a href="#contact" onclick="scrollToSection('contact'); toggleMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Professional Page -->
+    <div id="professionalPage" class="page active">
+        <!-- Hero Section -->
+        <section id="hero">
+            <h1>YOUR FULL NAME</h1>
+            <p>Strategic designer and developer focused on creating minimal, high-impact digital experiences.</p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="reveal-on-scroll">
+            <div class="section-container">
+                <h2 class="section-title">About</h2>
+                <p>I am a strategic designer and developer with expertise in creating minimal, functional digital experiences. My work focuses on creating clean, functional solutions that prioritize user experience and visual clarity.</p>
+                <p>With a background in design and technology, I approach every project with attention to detail and a commitment to excellence. I believe in the power of simplicity and the importance of thoughtful design.</p>
+                <p>Currently, I am working on projects that combine technical precision with aesthetic sensibility. I am passionate about minimalism, user-centered design, and continuously seeking opportunities to refine my craft.</p>
+                <p>My approach combines technical precision with aesthetic sensibility, ensuring that every project meets the highest standards of quality and usability.</p>
+            </div>
+        </section>
+
+        <!-- Experiences Section -->
+        <section id="experiences">
+            <div class="section-container">
+                <h2 class="section-title">Experiences</h2>
+                
+                <div class="experience reveal-on-scroll">
+                    <h3>Company Name</h3>
+                    <div class="role">Design Intern</div>
+                    <div class="time">June 2024 - August 2024</div>
+                    <ul>
+                        <li>Led design initiatives for key product features, improving user engagement by implementing clean, minimal interface patterns</li>
+                        <li>Collaborated with cross-functional teams to develop and ship high-quality digital experiences</li>
+                        <li>Conducted user research and translated insights into actionable design improvements</li>
+                        <li>Created comprehensive design systems and documentation for consistent implementation</li>
+                    </ul>
+                </div>
+
+                <div class="experience reveal-on-scroll">
+                    <h3>Another Company</h3>
+                    <div class="role">Development Intern</div>
+                    <div class="time">January 2024 - May 2024</div>
+                    <ul>
+                        <li>Built responsive web applications using modern development frameworks and best practices</li>
+                        <li>Optimized application performance and implemented efficient data management solutions</li>
+                        <li>Participated in code reviews and contributed to team development standards</li>
+                    </ul>
+                </div>
+
+                <div class="experience reveal-on-scroll">
+                    <h3>Third Company</h3>
+                    <div class="role">Research Intern</div>
+                    <div class="time">Summer 2023</div>
+                    <ul>
+                        <li>Conducted extensive research on user behavior patterns and digital interaction models</li>
+                        <li>Analyzed data and synthesized findings into comprehensive reports and presentations</li>
+                        <li>Contributed to strategic planning initiatives based on research insights</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="section-container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project reveal-on-scroll">
+                        <h3>Minimal E-Commerce Platform</h3>
+                        <p>A clean, high-performance e-commerce solution focusing on user experience and conversion optimization through thoughtful design and efficient architecture.</p>
+                        <div class="tools">React, Node.js, MongoDB</div>
+                    </div>
+
+                    <div class="project reveal-on-scroll">
+                        <h3>Portfolio Management System</h3>
+                        <p>Comprehensive tool for managing creative portfolios with emphasis on visual presentation and seamless content organization.</p>
+                        <div class="tools">Next.js, TypeScript, Tailwind CSS</div>
+                    </div>
+
+                    <div class="project reveal-on-scroll">
+                        <h3>Design System Library</h3>
+                        <p>Scalable component library built for consistency and efficiency across multiple product lines and team workflows.</p>
+                        <div class="tools">React, Storybook, Figma</div>
+                    </div>
+
+                    <div class="project reveal-on-scroll">
+                        <h3>Data Visualization Dashboard</h3>
+                        <p>Interactive analytics platform transforming complex data into clear, actionable insights through minimal design principles.</p>
+                        <div class="tools">D3.js, Vue.js, Python</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="reveal-on-scroll">
+            <div class="section-container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div>
+                        <div class="skill-category">
+                            <h3>Technical Skills</h3>
+                            <ul>
+                                <li>User Interface Design</li>
+                                <li>User Experience Design</li>
+                                <li>Web Development</li>
+                                <li>Responsive Design</li>
+                                <li>Design Systems</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Software & Tools</h3>
+                            <ul>
+                                <li>Figma</li>
+                                <li>Adobe Creative Suite</li>
+                                <li>React</li>
+                                <li>JavaScript</li>
+                                <li>HTML & CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="skill-category">
+                            <h3>Languages</h3>
+                            <ul>
+                                <li>English (Native)</li>
+                                <li>Spanish (Fluent)</li>
+                                <li>French (Conversational)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="reveal-on-scroll">
+            <div class="section-container">
+                <h2 class="section-title">Contact</h2>
+                <a href="mailto:email@example.com">email@example.com</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Blog Page -->
+    <div id="blogPage" class="page">
+        <!-- Blog Header -->
+        <section id="blog-header">
+            <div class="section-container">
+                <h2 class="section-title">Writings</h2>
+                <input type="text" class="search-bar" placeholder="Search writings..." id="searchInput" oninput="searchPosts()">
+                <div class="filters">
+                    <button class="active" data-filter="all" onclick="filterPosts('all')">All</button>
+                    <button data-filter="professional" onclick="filterPosts('professional')">Professional</button>
+                    <button data-filter="travel" onclick="filterPosts('travel')">Travel</button>
+                    <button data-filter="notes" onclick="filterPosts('notes')">Notes</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts -->
+        <section id="blog-posts">
+            <div class="section-container">
+                <div class="post-preview reveal-on-scroll" data-category="professional">
+                    <h2>The Power of Minimal Design</h2>
+                    <p>Exploring how restraint and simplicity in design can lead to more powerful and memorable user experiences. Less is often more when every element serves a clear purpose.</p>
+                    <div class="date">January 15, 2025</div>
+                </div>
+
+                <div class="post-preview reveal-on-scroll" data-category="travel">
+                    <h2>Notes from Tokyo</h2>
+                    <p>Observations on design, culture, and the balance between tradition and modernity in one of the world's most dynamic cities. The attention to detail is remarkable.</p>
+                    <div class="date">January 10, 2025</div>
+                </div>
+
+                <div class="post-preview reveal-on-scroll" data-category="professional">
+                    <h2>Building Design Systems That Scale</h2>
+                    <p>Practical insights on creating and maintaining design systems that grow with your product while keeping consistency and clarity at the core.</p>
+                    <div class="date">December 28, 2024</div>
+                </div>
+
+                <div class="post-preview reveal-on-scroll" data-category="notes">
+                    <h2>On Creative Process</h2>
+                    <p>Personal reflections on developing a sustainable creative practice, managing inspiration, and finding clarity in the work that matters most.</p>
+                    <div class="date">December 20, 2024</div>
+                </div>
+
+                <div class="post-preview reveal-on-scroll" data-category="travel">
+                    <h2>Wandering Through Copenhagen</h2>
+                    <p>A week spent exploring Scandinavian design principles in their natural habitat, from architecture to everyday objects and public spaces.</p>
+                    <div class="date">December 5, 2024</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" style="padding-top: 120px;">
+            <div style="max-width: 1400px; margin: 0 auto; padding: 0 80px;">
+                <h2 class="section-title" style="margin-bottom: 64px;">Gallery</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(0)">
+                    <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=800&fit=crop" alt="Gallery image 1">
+                </div>
+                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(1)">
+                    <img src="https://images.unsplash.com/photo-1682687221038-404cb8830901?w=800&h=800&fit=crop" alt="Gallery image 2">
+                </div>
+                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(2)">
+                    <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=800&h=800&fit=crop" alt="Gallery image 3">
+                </div>
+                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(3)">
+                    <img src="https://images.unsplash.com/photo-1682687220566-5599dbbebf11?w=800&h=800&fit=crop" alt="Gallery image 4">
+                </div>
+                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(4)">
+                    <img src="https://images.unsplash.com/photo-1682687221080-5cb261c645cb?w=800&h=800&fit=crop" alt="Gallery image 5">
+                </div>
+                <div class="gallery-item reveal-on-scroll" onclick="openLightbox(5)">
+                    <img src="https://images.unsplash.com/photo-1682687220801-eef408f95d71?w=800&h=800&fit=crop" alt="Gallery image 6">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">×</button>
+        <button class="lightbox-nav prev" onclick="prevImage()">‹</button>
+        <img id="lightboxImg" src="" alt="Lightbox image">
+        <button class="lightbox-nav next" onclick="nextImage()">›</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
