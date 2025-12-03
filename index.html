@@ -9,17 +9,14 @@
 <body>
     <!-- Navigation -->
     <nav id="navbar">
-        <a href="#" class="logo logo-photo-mode" onclick="showPage('professional'); window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
-            <span class="logo-photo-circle">
-                <img src="assets/profile-logo.jpg" alt="Logo photo">
-            </span>
+        <a href="#" class="logo logo-empty-mode" onclick="showPage('professional'); return false;">
             <span class="logo-text">Ahmet Burak Kara</span>
         </a>
         <ul class="nav-links">
-            <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
-            <li><a href="#experiences" onclick="scrollToSection('experiences')">Experiences</a></li>
-            <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
-            <li><a href="#skills" onclick="scrollToSection('skills')">Skills</a></li>
+            <li><a href="#about" onclick="scrollToSection('about'); return false;">About</a></li>
+            <li><a href="#experiences" onclick="scrollToSection('experiences'); return false;">Experiences</a></li>
+            <li><a href="#projects" onclick="scrollToSection('projects'); return false;">Projects</a></li>
+            <li><a href="#skills" onclick="scrollToSection('skills'); return false;">Skills</a></li>
             <li class="has-dropdown">
                 <a href="#" onclick="showPage('blog'); return false;">Blog</a>
                 <ul class="dropdown-menu">
@@ -27,7 +24,7 @@
                     <li><a href="#" onclick="goToBlogSection('gallery'); return false;">Gallery</a></li>
                 </ul>
             </li>
-            <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+            <li><a href="#contact" onclick="scrollToSection('contact'); return false;">Contact</a></li>
         </ul>
         <button class="hamburger" onclick="toggleMobileMenu()">
             <span></span>
@@ -39,12 +36,14 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <button class="close-menu" onclick="toggleMobileMenu()">×</button>
-        <a href="#about" onclick="scrollToSection('about'); toggleMobileMenu()">About</a>
-        <a href="#experiences" onclick="scrollToSection('experiences'); toggleMobileMenu()">Experiences</a>
-        <a href="#projects" onclick="scrollToSection('projects'); toggleMobileMenu()">Projects</a>
-        <a href="#skills" onclick="scrollToSection('skills'); toggleMobileMenu()">Skills</a>
-        <a href="#" onclick="showPage('blog'); toggleMobileMenu()">Blog</a>
-        <a href="#contact" onclick="scrollToSection('contact'); toggleMobileMenu()">Contact</a>
+        <a href="#about" onclick="scrollToSection('about'); toggleMobileMenu(); return false;">About</a>
+        <a href="#experiences" onclick="scrollToSection('experiences'); toggleMobileMenu(); return false;">Experiences</a>
+        <a href="#projects" onclick="scrollToSection('projects'); toggleMobileMenu(); return false;">Projects</a>
+        <a href="#skills" onclick="scrollToSection('skills'); toggleMobileMenu(); return false;">Skills</a>
+        <a href="#" onclick="showPage('blog'); toggleMobileMenu(); return false;">Blog</a>
+        <a href="#" onclick="goToBlogSection('blog-header'); toggleMobileMenu(); return false;">Writings</a>
+        <a href="#" onclick="goToBlogSection('gallery'); toggleMobileMenu(); return false;">Gallery</a>
+        <a href="#contact" onclick="scrollToSection('contact'); toggleMobileMenu(); return false;">Contact</a>
     </div>
 
     <!-- Professional Page -->
@@ -127,13 +126,29 @@
                     </button>
                 </div>
                 <div class="projects-grid">
-                    <!-- Existing 4 featured project cards remain unchanged -->
                     <div class="project reveal-on-scroll">
                         <h3>Minimal E-Commerce Platform</h3>
                         <p>A clean, high-performance e-commerce solution focusing on user experience and conversion optimization through thoughtful design and efficient architecture.</p>
                         <div class="tools">React, Node.js, MongoDB</div>
                     </div>
-                    <!-- ... other 3 projects ... -->
+
+                    <div class="project reveal-on-scroll">
+                        <h3>Portfolio Management System</h3>
+                        <p>Comprehensive tool for managing creative portfolios with emphasis on visual presentation and seamless content organization.</p>
+                        <div class="tools">Next.js, TypeScript, Tailwind CSS</div>
+                    </div>
+
+                    <div class="project reveal-on-scroll">
+                        <h3>Design System Library</h3>
+                        <p>Scalable component library built for consistency and efficiency across multiple product lines and team workflows.</p>
+                        <div class="tools">React, Storybook, Figma</div>
+                    </div>
+
+                    <div class="project reveal-on-scroll">
+                        <h3>Data Visualization Dashboard</h3>
+                        <p>Interactive analytics platform transforming complex data into clear, actionable insights through minimal design principles.</p>
+                        <div class="tools">D3.js, Vue.js, Python</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -210,31 +225,56 @@
         <section id="blog-posts">
             <div class="section-container">
                 <div class="post-preview reveal-on-scroll" data-category="professional">
-                    <h2>The Power of Minimal Design</h2>
+                    <div class="post-header">
+                        <h2>The Power of Minimal Design</h2>
+                        <button class="text-link read-all-button" type="button" onclick="openBlogPost('post-1'); return false;">
+                            Read all
+                        </button>
+                    </div>
                     <p>Exploring how restraint and simplicity in design can lead to more powerful and memorable user experiences. Less is often more when every element serves a clear purpose.</p>
                     <div class="date">January 15, 2025</div>
                 </div>
 
                 <div class="post-preview reveal-on-scroll" data-category="travel">
-                    <h2>Notes from Tokyo</h2>
+                    <div class="post-header">
+                        <h2>Notes from Tokyo</h2>
+                        <button class="text-link read-all-button" type="button" onclick="openBlogPost('post-2'); return false;">
+                            Read all
+                        </button>
+                    </div>
                     <p>Observations on design, culture, and the balance between tradition and modernity in one of the world's most dynamic cities. The attention to detail is remarkable.</p>
                     <div class="date">January 10, 2025</div>
                 </div>
 
                 <div class="post-preview reveal-on-scroll" data-category="professional">
-                    <h2>Building Design Systems That Scale</h2>
+                    <div class="post-header">
+                        <h2>Building Design Systems That Scale</h2>
+                        <button class="text-link read-all-button" type="button" onclick="openBlogPost('post-3'); return false;">
+                            Read all
+                        </button>
+                    </div>
                     <p>Practical insights on creating and maintaining design systems that grow with your product while keeping consistency and clarity at the core.</p>
                     <div class="date">December 28, 2024</div>
                 </div>
 
                 <div class="post-preview reveal-on-scroll" data-category="notes">
-                    <h2>On Creative Process</h2>
+                    <div class="post-header">
+                        <h2>On Creative Process</h2>
+                        <button class="text-link read-all-button" type="button" onclick="openBlogPost('post-4'); return false;">
+                            Read all
+                        </button>
+                    </div>
                     <p>Personal reflections on developing a sustainable creative practice, managing inspiration, and finding clarity in the work that matters most.</p>
                     <div class="date">December 20, 2024</div>
                 </div>
 
                 <div class="post-preview reveal-on-scroll" data-category="travel">
-                    <h2>Wandering Through Copenhagen</h2>
+                    <div class="post-header">
+                        <h2>Wandering Through Copenhagen</h2>
+                        <button class="text-link read-all-button" type="button" onclick="openBlogPost('post-5'); return false;">
+                            Read all
+                        </button>
+                    </div>
                     <p>A week spent exploring Scandinavian design principles in their natural habitat, from architecture to everyday objects and public spaces.</p>
                     <div class="date">December 5, 2024</div>
                 </div>
@@ -361,6 +401,26 @@
             </div>
         </section>
     </div>
+    <!-- Blog Post Detail Page -->
+    <div id="blogPostPage" class="page">
+        <section id="blog-post-detail">
+            <div class="section-container blog-post-container">
+                <button class="text-link back-link" type="button" onclick="showPage('blog'); return false;">
+                    ← Back to Blog
+                </button>
+                
+                <article id="postContent">
+                    <h1 class="post-title">Post Title</h1>
+                    <div class="post-meta">
+                        <span class="post-date">Date</span>
+                    </div>
+                    <div class="post-body">
+                        <p>Post content will be loaded here...</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" onclick="closeLightbox()">×</button>
@@ -369,6 +429,11 @@
         <button class="lightbox-nav next" onclick="nextImage()">›</button>
     </div>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        Designed by Ahmet Burak Kara
+    </footer>
     <script src="js/script.js"></script>
+    
 </body>
 </html>
