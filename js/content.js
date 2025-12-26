@@ -60,7 +60,7 @@ const content = {
       period: "August 2023 - September 2023",
       location: "Izmir, Turkey",
       description: [
-        "Done my summer internship at BMC Automotive's R&D department, involved in the development of an autonomous military vehicle.",
+        "Completed summer internship at BMC Automotive's R&D department, involved in the development of an autonomous military vehicle.",
         "Contributed to both hardware and software aspects of the project, collaborating closely with interdisciplinary teams.",
         "Gained experience using path-finding algorithms such as A* and RRT using the C/C++ programming language."
       ]

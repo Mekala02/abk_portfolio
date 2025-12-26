@@ -90,7 +90,7 @@ function renderAbout() {
       </div>
       <div class="about-text">
         ${textHTML}
-        <a href="${cvLink}" class="cv-button" download>Download CV</a>
+        <a href="${cvLink}" class="cv-button" target="_blank" rel="noopener noreferrer">Download CV</a>
       </div>
     </div>
     <div class="skills-grid">
