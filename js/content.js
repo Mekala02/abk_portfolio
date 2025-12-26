@@ -1,19 +1,47 @@
 const content = {
   hero: {
     name: "Ahmet Burak Kara",
-    title: "Engineer & Designer"
+    statement: "Engineer & Designer"
   },
 
-  about: {
-    text: [
-      "As an avid engineering enthusiast, I'm constantly exploring and expanding my knowledge and skills in the field.",
-      "My passion for finding innovative solutions to complex problems has led me to work on exciting projects in electronics, mechanics, software development, and AI.",
-      "I'm particularly fascinated by the potential of AI to transform the way we live and work.",
-      "For me, engineering is not just a career, it's a passion."
-    ],
-    image: "assets/profile-about.jpg",
-    cvLink: "assets/cv.pdf"
-  },
+  work: [
+    {
+      title: "Distributed Computation on GPUs",
+      version: "v1.0",
+      period: "2024–2025",
+      metadata: "TUSAŞ LiftUp | Supported by TÜBİTAK 2209-B",
+      stack: ["C/C++", "Python", "YOLOv8", "TCP"],
+      description: "Developed distributed training infrastructure enabling heterogeneous GPU nodes at TUSAŞ to collaboratively train deep learning models over custom TCP-based communication layer. Reverse-engineered YOLOv8 training pipeline, designed socket-based protocol for parameter exchange. Implemented CPU/GPU benchmarking, hardware-eligibility checks, dynamic workload scheduling, GPU-accelerated parameter aggregation. Achieved 73% convergence toward ideal training time.",
+      publications: [
+        {
+          title: "BSc Graduation Thesis",
+          url: "assets/distributed-computing-thesis.pdf"
+        },
+        {
+          title: "TUSAŞ Conference Paper",
+          url: "assets/distributed-computing-tusas-paper.pdf"
+        }
+      ]
+    },
+    {
+      title: "École 42 Piscine & Core Program",
+      version: null,
+      period: "2023–2024",
+      metadata: "École 42 Istanbul",
+      stack: ["C/C++", "Shell", "Algorithms"],
+      description: "Selected for intensive Piscine program. Completed 1-month peer-to-peer, project-driven training. Implemented core standard library functions from scratch. Advanced to main curriculum after ranking high enough. Developed low-level memory manipulation algorithms.",
+      publications: []
+    },
+    {
+      title: "Autonomous Unmanned Surface Vehicle",
+      version: null,
+      period: "2019",
+      metadata: "Teknofest — Finalist",
+      stack: ["C/C++", "Python", "OpenCV"],
+      description: "Led three-person engineering team in Teknofest 2019 'Robotik Fetih 1453' challenge. Developed object-detection and mission-execution capabilities using OpenCV, NumPy, custom C modules. Vessel navigated between red vessels autonomously, retrieved green targets, operated onboard projectile mechanism. Advanced to finalist stage.",
+      publications: []
+    }
+  ],
 
   experiences: [
     {
@@ -39,57 +67,34 @@ const content = {
     }
   ],
 
-  projects: [
-    {
-      title: "Distributed Computation on GPUs | TUSAŞ LiftUp | Supported by TÜBİTAK 2209-B | 2025",
-      description: "Developed a distributed training infrastructure enabling heterogeneous GPU nodes at TUSAŞ to collaboratively train deep learning models over a custom TCP-based communication layer. Reverse-engineered the YOLOv8 training pipeline to identify synchronization points and designed a socket-based protocol for efficient parameter and loss exchange across nodes. Implemented CPU/GPU benchmarking modules, hardware-eligibility checks, dynamic workload scheduling, and GPU-accelerated parameter aggregation to optimize performance on asymmetric systems. Experiments demonstrated up to 73% convergence toward ideal training time, significantly reducing model training duration and improving resource utilization. The project was funded by the TÜBİTAK 2209-B Research Support Program, recognizing its innovation and applicability within TUSAŞ's distributed computing environment.",
-      tools: ["C/C++", "Python", "YoloV8"],
-      link: null,
-      publications: [
-        {
-          title: "BSc Graduation Thesis",
-          url: "assets/distributed-computing-thesis.pdf"
-        },
-        {
-          title: "TUSAŞ Conference Paper",
-          url: "assets/distributed-computing-tusas-paper.pdf"
-        }
-      ]
-    },
-    {
-      title: "École 42 Piscine & Core Program",
-      description: "Selected for the École 42 Istanbul intensive Piscine program and successfully completed the highly competitive 1-month training based on peer-to-peer and project-driven learning. Expanded C programming proficiency by implementing core standard library functions from scratch and completing collaborative system-level tasks. After ranking high enough to pass the Piscine, advanced to the main curriculum, where I developed low-level memory manipulation algorithms and strengthened my foundations in problem-solving, debugging, and team-based software development.",
-      tools: ["C/C++", "Shell", "Algorithms and Data Structures"],
-      link: null,
-      publications: []
-    },
-    {
-      title: "Autonomous Unmanned Surface Vehicle (Teknofest 2019 – Finalist)",
-      description: "During high school, completed electronics, Arduino, C, and Python training under the instruction of Dr. Tankut Akgül. Formed a three-person engineering team and competed in Teknofest 2019's \"Robotik Fetih 1453\" challenge with an autonomous unmanned surface vehicle (USV). As team leader, coordinated project direction and team motivation while focusing on computer vision and systems integration. Developed the vessel's object-detection and mission-execution capabilities using OpenCV, NumPy, and custom C-based modules. The USV successfully navigated between red vessels, autonomously retrieved designated green targets, and operated an onboard projectile mechanism to complete mission objectives. The project advanced to the finalist stage of the national competition.",
-      tools: ["C/C++", "Python"],
-      link: null,
-      publications: []
-    }
-  ],
+  about: {
+    text: [
+      "As an avid engineering enthusiast, I'm constantly exploring and expanding my knowledge and skills in the field.",
+      "My passion for finding innovative solutions to complex problems has led me to work on exciting projects in electronics, mechanics, software development, and AI.",
+      "I'm particularly fascinated by the potential of AI to transform the way we live and work.",
+      "For me, engineering is not just a career, it's a passion."
+    ],
+    image: "assets/profile-about.jpg",
+    cvLink: "assets/cv.pdf"
+  },
 
   skills: {
-    "Technical Skills": [
-      "Control Systems Design",
+    "Technical": [
+      "Control Systems",
       "Robotics",
-      "ML/DL",
-      "Autonomous Systems"
+      "Autonomous Systems",
+      "Embedded Systems"
     ],
-    "Software & Tools": [
+    "Software": [
       "C/C++",
       "Python",
+      "ROS2",
+      "CUDA"
+    ],
+    "Tools": [
       "SolidWorks",
       "Proteus",
-      "AutoCAD",
-      "Adobe Photoshop"
-    ],
-    "Languages": [
-      "Turkish (Native)",
-      "English (Fluent)"
+      "AutoCAD"
     ]
   },
 
