@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --white: #FFFFFF;
     --black: #000000;
@@ -70,8 +74,15 @@ nav .nav-links a {
     color: var(--black);
 }
 
-nav .nav-links a:hover {
+nav .nav-links a:hover,
+nav .nav-links a:focus {
     color: var(--gray);
+    outline: none;
+}
+
+nav .nav-links a:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 4px;
 }
 
 .hamburger {
@@ -87,6 +98,15 @@ nav .nav-links a:hover {
     width: 24px;
     height: 1px;
     background: var(--black);
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+.hamburger:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 4px;
 }
 
 .mobile-menu {
@@ -127,6 +147,15 @@ nav .nav-links a:hover {
     border: none;
     cursor: pointer;
     color: var(--black);
+}
+
+.close-menu:focus {
+    outline: none;
+}
+
+.close-menu:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 4px;
 }
 
 /* ================================
@@ -309,9 +338,16 @@ section {
     border-radius: 2px;
 }
 
-.project-publication-link:hover {
+.project-publication-link:hover,
+.project-publication-link:focus {
     border-color: var(--black);
     color: var(--gray);
+    outline: none;
+}
+
+.project-publication-link:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 2px;
 }
 
 /* ================================
@@ -365,8 +401,15 @@ section {
     margin-bottom: 16px;
 }
 
-#contact a:hover {
+#contact a:hover,
+#contact a:focus {
     color: var(--gray);
+    outline: none;
+}
+
+#contact a:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 4px;
 }
 
 /* ================================
@@ -399,9 +442,16 @@ section {
     cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
     background: #fafafa;
     color: var(--gray);
+    outline: none;
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 4px;
 }
 
 .cv-button {

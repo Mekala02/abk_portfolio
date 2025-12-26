@@ -6,6 +6,24 @@
     <meta name="theme-color" content="#ffffff">
     <title>Ahmet Burak Kara - Portfolio</title>
 
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ahmet Burak Kara - Engineer & Designer specializing in robotics, AI, control systems, and autonomous systems. Portfolio showcasing projects in distributed computing, embedded systems, and software development.">
+    <meta name="author" content="Ahmet Burak Kara">
+    <meta name="keywords" content="Ahmet Burak Kara, Engineer, Designer, Robotics, AI, Machine Learning, Deep Learning, Control Systems, Autonomous Systems, Software Development, C++, Python">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ahmet Burak Kara - Portfolio">
+    <meta property="og:description" content="Engineer & Designer specializing in robotics, AI, and autonomous systems. Explore my projects and experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.akara.engineer">
+    <meta property="og:image" content="https://www.akara.engineer/assets/profile-about.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ahmet Burak Kara - Portfolio">
+    <meta name="twitter:description" content="Engineer & Designer specializing in robotics, AI, and autonomous systems.">
+    <meta name="twitter:image" content="https://www.akara.engineer/assets/profile-about.jpg">
+
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96.png">
@@ -15,8 +33,8 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav id="navbar">
-        <a href="#" class="logo">
+    <nav id="navbar" aria-label="Main navigation">
+        <a href="#" class="logo" aria-label="Home - Ahmet Burak Kara">
             <span class="logo-text">Ahmet Burak Kara</span>
         </a>
         <ul class="nav-links">
@@ -26,15 +44,15 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="hamburger">
+        <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
     </nav>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="close-menu">×</button>
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation menu">
+        <button class="close-menu" aria-label="Close mobile menu">×</button>
         <a href="#about">About</a>
         <a href="#experiences">Experiences</a>
         <a href="#projects">Projects</a>

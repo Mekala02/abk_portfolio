@@ -13,7 +13,7 @@ function renderAbout() {
   aboutSection.innerHTML = `
     <div class="about-photo-wrapper">
       <div class="about-photo-circle">
-        <img src="${content.about.image}" alt="Profile photo">
+        <img src="${content.about.image}" alt="Ahmet Burak Kara - Engineer & Designer">
       </div>
     </div>
     <h2 class="section-title">About</h2>
@@ -110,14 +110,20 @@ function handleNavScroll() {
 
 function toggleMobileMenu() {
   const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('active');
-  document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+  const hamburger = document.querySelector('.hamburger');
+  const isActive = menu.classList.toggle('active');
+
+  document.body.style.overflow = isActive ? 'hidden' : '';
+  hamburger.setAttribute('aria-expanded', isActive);
 }
 
 function closeMobileMenu() {
   const menu = document.getElementById('mobileMenu');
+  const hamburger = document.querySelector('.hamburger');
+
   menu.classList.remove('active');
   document.body.style.overflow = '';
+  hamburger.setAttribute('aria-expanded', 'false');
 }
 
 function init() {
